@@ -1,5 +1,9 @@
-document.body.textContent = "";
+function kill_views(){
+let views = document.querySelectorAll('[href*="analytics"]');
+for (let i = 0; i < views.length; i++) {
+    views[i].remove()
+    console.log('removed element' + views[i])
+  } 
+}
 
-let header = document.createElement("h1");
-header.textContent = "This page has been eaten";
-document.body.appendChild(header);
+setInterval(kill_views, 500)
