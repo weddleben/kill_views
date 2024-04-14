@@ -1,11 +1,20 @@
 function kill_views() {
-// not sure if this is the best way to go about it...
+// timeline view
 let views = document.querySelectorAll('[href*="analytics"]');
 for (let i = 0; i < views.length; i++) {
     let outer = views[i].parentElement
     outer.style.fontSize = '25px'
     views[i].innerHTML = '&#129335;&#8205;&#9792;&#65039;';
   }
+
+//individual tweet view
+let innerViews = document.getElementsByClassName("css-1qaijid r-bcqeeo r-qvutc0 r-poiln3 r-1b43r93 r-1cwl3u0 r-b88u0q")
+for (let i = 0; i < innerViews.length; i++) {
+  innerViews[i].style.fontSize = '25px'
+  innerViews[i].innerHTML = '&#129335;&#8205;&#9792;&#65039;';
+}
+
+//blue check #1
   let classNames = "css-175oi2r r-1awozwy r-18u37iz r-1wbh5a2 r-dnmrzs"
   var name = document.getElementsByClassName(classNames);
   let newNode = document.createElement("div");
@@ -13,9 +22,11 @@ for (let i = 0; i < views.length; i++) {
   // let textnode = '&#129335;&#8205;&#9792;&#65039;';
   for (let i = 0; i < name.length; i++) {
     if (name[i].className == classNames) {
+    name[i].classList.add('duplicate')
     console.log(name[i].append(newNode));
     }
   }
+  
 }
 
 setInterval(kill_views, 1000);
