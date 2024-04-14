@@ -3,7 +3,7 @@ function kill_views() {
 let views = document.querySelectorAll('[href*="analytics"]');
 for (let i = 0; i < views.length; i++) {
     let outer = views[i].parentElement
-    outer.style.fontSize = '31px'
+    outer.style.fontSize = '25px'
     views[i].innerHTML = '&#129335;&#8205;&#9792;&#65039;';
   }
   let classNames = "css-175oi2r r-1awozwy r-18u37iz r-1wbh5a2 r-dnmrzs"
