@@ -40,5 +40,33 @@ for (let i = 0; i < name2.length; i++) {
 
 }
 
+// function frankie() {
+//   let toReplace = "Finicky "
+//   let feet = "Purple Feet Lady"
+//   let containers = document.getElementsByClassName("css-1jxf684 r-dnmrzs r-1udh08x r-3s2u2q r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3");
+//   for (i=0; i <= containers.length; i++) {
+//     if (containers[i].innerText.includes(toReplace) )
+//       containers[i].innerText = feet;
+    
+//   }
+
+// }
+
+function frankie() {
+  let toReplace = "Finicky "
+  let feet = "Purple Feet Lady"
+  let containers = document.body.getElementsByTagName("span");
+  for (i=0; i <= containers.length; i++) {
+    if (containers[i].innerText.includes(toReplace) )
+      containers[i].innerText = feet; 
+  }
+}
+
+setTimeout(frankie, 500)
 setInterval(kill_views, 1000);
 
+document.addEventListener("scroll", (event) => {
+  frankie()
+}
+)
+// setInterval(frankie, 1000)
